@@ -1,0 +1,11 @@
+package build
+import mill._, scalalib._
+
+object app extends ScalaModule {
+  def scalaVersion = "3.7.3"
+
+  
+  def mvnDeps = Seq(
+    mvn"com.lihaoyi::cask:0.11.3",
+  )
+}
