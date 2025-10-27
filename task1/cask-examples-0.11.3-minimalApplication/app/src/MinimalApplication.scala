@@ -43,4 +43,9 @@ object MinimalApplication extends cask.MainRoutes:
     ujson.Obj("summedList" -> sumLists(sumLists(list1, list2), list3))
   }
 
+  @cask.postJson("/set-head")
+  def setHead(list: Seq[Int], element: Int) = {
+    ujson.Obj("newList" -> (element +: list))
+  }
+
   initialize()
