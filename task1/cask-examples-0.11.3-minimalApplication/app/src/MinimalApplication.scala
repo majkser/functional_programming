@@ -29,4 +29,18 @@ object MinimalApplication extends cask.MainRoutes:
     ujson.Obj("isSorted" -> isSorted)
   }  
 
+  def sumLists(list1: Seq[Int], list2: Seq[Int]): Seq[Int] = {
+    val length = math.min(list1.length, list2.length)
+    var result = Seq[Int]()
+    for (i <- 0 until length) {
+      result :+= (list1(i) + list2(i))
+    }
+    result
+  }
+
+  @cask.postJson("/sum-three-lists")
+  def sumThreeLists(list1: Seq[Int], list2: Seq[Int], list3: Seq[Int]) = {
+    ujson.Obj("summedList" -> sumLists(sumLists(list1, list2), list3))
+  }
+
   initialize()
