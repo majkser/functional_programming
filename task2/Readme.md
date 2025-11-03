@@ -13,4 +13,6 @@ oraz który zawiera paczki:
 
 Kod: [Link do zadania 2](https://github.com/majkser/functional_programming/blob/main/task2/Dockerfile)
 
+[Link do dockerhub repo](https://hub.docker.com/r/majkser/ubuntutest)
+
 https://github.com/user-attachments/assets/c25a5fd8-1fb3-4094-9591-6f783a815286
