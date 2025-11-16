@@ -4,6 +4,6 @@
 
 3.5 zwroci wariancję z listy; do implementacji wykorzystać należy typ opcjonalny [Link do commita](https://github.com/majkser/functional_programming/commit/85f94f16099464d4216119d9ffca2215bb07625a)
 
-Kod: [Link do zadania 4](https://github.com/majkser/functional_programming/tree/main/task4)
+Kod: [Link do zadania 4](https://github.com/majkser/functional_programming/blob/main/task4/cask-examples-0.11.3-minimalApplication/app/src/MinimalApplication.scala)
 
 https://github.com/user-attachments/assets/3bdf1e4f-d440-443b-bbe3-f8f76a8f7bb6
