@@ -18,4 +18,32 @@ object MinimalApplication extends cask.MainRoutes:
     )
   }
 
+  @cask.postJson("/variance")
+  def variance(list: Option[Seq[Int]] = None) = {
+    
+    def calculateVariance(baseList: Seq[Int]) = {
+      val n = baseList.length
+      val avg = baseList.sum.toDouble / n
+      var variance = 0.0
+
+      for (num <- baseList) {
+        variance += Math.pow(num - avg, 2)
+      }
+      variance /= n
+
+      ujson.Obj(
+        "result" -> variance
+      )
+    }
+    
+    val baseList = list.getOrElse(Seq.empty[Int])
+    if (baseList.isEmpty) {
+      ujson.Obj(
+        "result" -> "Can't calc variance from empty list ;("
+      )
+    } else {
+      calculateVariance(baseList)
+    }
+  }
+
   initialize()
