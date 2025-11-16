@@ -1,8 +1,9 @@
-**Zadanie 3** Struktury danych
+**Zadanie 4** Typ opcjonalny
 
-3.0 Zwróć wynik funkcji tail, która usuwa pierwszy element z listy
-(parameter); należy rozważyć przypadek Nil jako parametr [Link do commita](https://github.com/majkser/functional_programming/commit/466ece1d337d9173a39f716d19b4fe2849e0a389)
+3.0 zwróci taki sam wynik jak zad.1 4.5 ale wykorzysta typ opcjonalny [Link do commita](https://github.com/majkser/functional_programming/commit/ecfb50a664731b77de41b114b30dd6bdfb338cb4)
 
-Kod: [Link do zadania 3](https://github.com/majkser/functional_programming/blob/main/task3/cask-examples-0.11.3-minimalApplication/app/src/MinimalApplication.scala)
+3.5 zwroci wariancję z listy; do implementacji wykorzystać należy typ opcjonalny [Link do commita](https://github.com/majkser/functional_programming/commit/85f94f16099464d4216119d9ffca2215bb07625a)
 
-https://github.com/user-attachments/assets/2d199a49-d5be-4829-a140-b1123b293d45
+Kod: [Link do zadania 4](https://github.com/majkser/functional_programming/tree/main/task4)
+
+https://github.com/user-attachments/assets/3bdf1e4f-d440-443b-bbe3-f8f76a8f7bb6
