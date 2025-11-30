@@ -13,4 +13,14 @@ object MinimalApplication extends cask.MainRoutes:
     )
   }
 
+  @cask.postJson("/cube-nums")
+  def cubeNums(nums: Seq[Int]) = {
+    val cubed = nums.map(i => Math.pow(i, 3).toInt)
+    val map = cubed.groupBy(identity).map((i, j) => (i, j.size))
+    
+    ujson.Obj(
+      "cubes" -> map.map((i, j) => (i.toString, j)).toSeq
+    )
+  }
+
   initialize()
