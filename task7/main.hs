@@ -19,6 +19,12 @@ nextRandomInt = do
   Control.Monad.State.put nextSeed
   return nextSeed
 
+nextRandomDouble :: State Int Double
+nextRandomDouble = do
+  randInt <- nextRandomInt
+  let m = (2 ^ 31) - 1
+  return $ fromIntegral randInt / fromIntegral m
+
 bridge :: IORef s -> State s a -> IO a
 bridge ref stateAction = 
   atomicModifyIORef ref $ \currentState ->
@@ -33,3 +39,7 @@ main = do
     Web.Scotty.get "/random-int" $ do
       randomInt <- liftIO $ bridge stateSeed nextRandomInt
       json $ object ["random int: " .= randomInt]
+
+    Web.Scotty.get "/random-double" $ do
+      randomDouble <- liftIO $ bridge stateSeed nextRandomDouble
+      json $ object ["random double: " .= randomDouble]
