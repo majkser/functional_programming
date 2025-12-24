@@ -1,7 +1,7 @@
 FROM haskell:latest
 
 RUN cabal update && \
-    cabal install --lib scotty aeson text
+    cabal install --lib scotty aeson text mtl
 
 COPY main.hs .
 
