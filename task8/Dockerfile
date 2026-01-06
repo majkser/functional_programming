@@ -5,7 +5,7 @@ RUN cabal update && \
 
 COPY main.hs .
 
-RUN ghc --make main.hs -o app
+RUN ghc --make -threaded main.hs -o app
 
 EXPOSE 3000
 
